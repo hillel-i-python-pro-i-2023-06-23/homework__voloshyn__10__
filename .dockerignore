@@ -2,7 +2,7 @@
 **
 
 # Exclude
-!../homework__voloshyn__10/managed
-!../homework__voloshyn__10/apps
-!../homework__voloshyn__10/core
+!manage.py
+!app/
+!homework__voloshyn__10/
 !requirements.txt

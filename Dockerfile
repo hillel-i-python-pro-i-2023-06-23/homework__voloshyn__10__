@@ -17,17 +17,11 @@ COPY --chown=${USER} requirements.txt requirements.txt
 RUN pip install --upgrade pip && \
     pip install --requirement requirements.txt
 
-COPY --chown=${USER} ./core core
-COPY --chown=${USER} ./apps apps
+COPY --chown=${USER} ./homework__voloshyn__10 homework__voloshyn__10
+COPY --chown=${USER} ./app app
 COPY --chown=${USER} ./manage.py manage.py
 
-USER ${USER}
-
-VOLUME ${WORKDIR}/db
-
-EXPOSE 8000
-
-ENTRYPOINT ["python", "manage.py", "runserver"]
+run
 
 USER ${USER}
 
