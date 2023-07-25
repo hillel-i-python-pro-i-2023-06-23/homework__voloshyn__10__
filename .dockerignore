@@ -2,6 +2,7 @@
 **
 
 # Exclude
+!app/templates
 !manage.py
 !app/
 !homework__voloshyn__10/

@@ -21,12 +21,12 @@ COPY --chown=${USER} ./homework__voloshyn__10 homework__voloshyn__10
 COPY --chown=${USER} ./app app
 COPY --chown=${USER} ./manage.py manage.py
 
-run
-
 USER ${USER}
 
 VOLUME ${WORKDIR}/db
 
 EXPOSE 8000
+
+RUN python manage.py migrate
 
 ENTRYPOINT ["python", "manage.py", "runserver"]
